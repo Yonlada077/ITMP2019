@@ -7,7 +7,7 @@ function init() {
 	button.onclick = handleButtonClick;
 
 
-	//loadPlaylist();
+	loadPlaylist();
 
 	
 }
@@ -20,7 +20,7 @@ function handleButtonClick() {
 	var tem = document.createElement("li");
 	    tem.setAttribute=("id", "songName");
 		tem.innerHTML = songName;
-		//var mm=document.getElementById("songName");
+		var mm=document.getElementById("songName");
 if (songName == "") {
 	 	alert("Please enter a song");
 	 }
