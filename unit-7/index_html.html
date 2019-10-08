@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+	<style>
+	.yoyo{
+		width: 100px;
+		height: 100px;
+		position: fixed;
+		right: 1em;
+        bottom: 1em;
+        background-color: blue;
+	}
+	</style>
+	
+
 	<title>Hello Ocean World</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://jabont.com/jayss/jayss.css">
 </head>
 <body>
+	<div id="yoyo" class="yoyo"></div>
 	<div id="d1" style="height: 400px;width: 100%;background: pink"></div>
 	<div id="d2" style="height: 400px;width: 100%;background: orchid"></div>
 	<div id="d3" style="height: 400px;width: 100%;background: pink"></div>
@@ -22,5 +36,14 @@
 	<div id="d14" style="height: 400px;width: 100%;background: orchid"></div>
 	<div id="d15" style="height: 400px;width: 100%;background: pink"></div>
 	<div id="d16" style="height: 400px;width: 100%;background: orchid"></div>
+
+	<script type="text/javascript">
+		function rotateNongYoyo(){
+			let r = window.pageYOffset;
+			yoyo.style.transform = `rotate(${r}deg)`;
+		}
+		window.addEventListener("scroll", rotateNongYoyo);
+        
+	</script>
 </body>
 </html>
